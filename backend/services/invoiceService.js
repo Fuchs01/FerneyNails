@@ -125,7 +125,7 @@ export const generateInvoice = async (appointmentData) => {
     // Sauvegarder les données de la facture dans la base de données
     const db = readDb();
     
-    if (!db.invoices) {
+    if (!Array.isArray(db.invoices)) {
       db.invoices = [];
     }
 
@@ -146,7 +146,8 @@ export const generateInvoice = async (appointmentData) => {
       discount: appointment.discount
     };
 
-    db.invoices = newInvoice;
+    // Ajouter au tableau des factures au lieu d'écraser
+    db.invoices.push(newInvoice);
 
     // Sauvegarder dans la base de données
     if (!writeDb(db)) {
