@@ -2,7 +2,8 @@ export const translations = {
   fr: {
     nav: {
       services: 'Services',
-      appointments: 'Rendez-vous'
+      appointments: 'Rendez-vous',
+      points: 'Programme de fidélité'
     },
     hero: {
       title: 'Votre voyage beauté commence ici',
@@ -18,7 +19,8 @@ export const translations = {
   en: {
     nav: {
       services: 'Services',
-      appointments: 'Appointments'
+      appointments: 'Appointments',
+      points: 'Loyalty Program'
     },
     hero: {
       title: 'Your beauty journey starts here',

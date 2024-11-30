@@ -39,6 +39,9 @@ const Header: React.FC = () => {
            <Link to="/appointments" className="text-gray-700 hover:text-pink-500 font-medium whitespace-nowrap">
              {t('nav.appointments')}
            </Link>
+           <Link to="/points" className="text-gray-700 hover:text-pink-500 font-medium whitespace-nowrap">
+           {t('nav.points')}
+         </Link>
            <div className="flex items-center gap-2">
              <button className="px-2 py-1 text-sm font-medium bg-pink-100 text-pink-600 rounded">
                FR
@@ -76,13 +79,6 @@ const Header: React.FC = () => {
                        onClick={() => setIsMenuOpen(false)}
                      >
                        Mes rendez-vous
-                     </Link>
-					           <Link
-                       to="/points"
-                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50"
-                       onClick={() => setIsMenuOpen(false)}
-                     >
-                       Fidélité et Points
                      </Link>
                      <button
                        onClick={async () => {

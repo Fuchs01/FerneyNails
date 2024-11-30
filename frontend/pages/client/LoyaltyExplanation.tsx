@@ -1,8 +1,12 @@
 import React from 'react';
-import { Star, Gift, Calculator, ArrowRight } from 'lucide-react';
+import { ArrowRight, Calculator, Gift, Star } from 'lucide-react';
 
 
-export default function LoyaltyExplanation() {
+
+const LoyaltyExplanation: React.FC = () => {
+  
+  
+
 
   return (
     <div className="py-12 bg-gray-50">
@@ -26,7 +30,7 @@ export default function LoyaltyExplanation() {
                 </h2>
               </div>
               <p className="mt-4 text-lg text-gray-600">
-                Pour chaque euro dépensé, vous gagnez {loyalty.pointsPerEuro} point de fidélité.
+                Pour chaque euro dépensé, vous gagnez 1 point de fidélité.
                 Plus vous réservez de services, plus vous accumulez de points !
               </p>
             </div>
@@ -61,7 +65,7 @@ export default function LoyaltyExplanation() {
                       </div>
                     </div>
                     <p className="ml-3 text-gray-600">
-                      Plus vous avez de points, plus la réduction sera importante
+                      Plus vous avez de points, plus la réduction sera importante en %
                     </p>
                   </div>
                   
@@ -72,8 +76,9 @@ export default function LoyaltyExplanation() {
                       </div>
                     </div>
                     <p className="ml-3 text-gray-600">
-                      Utilisez-les quand vous le souhaitez pour une réduction plus importante
+                      la reduction sera automatique des 500 points (5%)
                     </p>
+
                   </div>
                 </div>
 
@@ -82,7 +87,7 @@ export default function LoyaltyExplanation() {
                   <div className="mt-2 flex items-center space-x-2">
                     <span className="text-pink-900">1000 points</span>
                     <ArrowRight className="h-4 w-4 text-pink-600" />
-                    <span className="text-pink-900">15€ de réduction</span>
+                    <span className="text-pink-900">10% de réduction sur tout les prestations</span>
                   </div>
                 </div>
               </div>
@@ -135,9 +140,9 @@ export default function LoyaltyExplanation() {
                 <div className="mt-8 p-4 bg-pink-50 rounded-lg">
                   <h3 className="text-lg font-semibold text-pink-900">Exemple :</h3>
                   <div className="mt-2 flex items-center space-x-2">
-                    <span className="text-pink-900">100 points</span>
+                    <span className="text-pink-900">500 points</span>
                     <ArrowRight className="h-4 w-4 text-pink-600" />
-                    <span className="text-pink-900">1€ de réduction</span>
+                    <span className="text-pink-900">5€ de réduction</span>
                   </div>
                 </div>
               </div>
@@ -173,4 +178,6 @@ export default function LoyaltyExplanation() {
       </div>
     </div>
   );
-}
+  };
+  
+  export default LoyaltyExplanation;
