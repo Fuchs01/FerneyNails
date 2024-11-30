@@ -1,0 +1,13 @@
+{
+  "name": "fermeynails",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd ./frontend && npm run dev -- --host 0.0.0.0",
+    "dev:backend": "cd ./backend && npm run dev",
+    "dev": "concurrently \"npm run dev:frontend --verbose\" \"npm run dev:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

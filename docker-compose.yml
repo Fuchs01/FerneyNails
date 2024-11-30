@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  ferneynails:
+    build: .
+    container_name: ferneynails
+    ports:
+      - "3001:3001"  # API port
+      - "5173:5173"  # Frontend dev server port
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    networks:
+      - ferneynails-network
+
+networks:
+  ferneynails-network:
+    driver: bridge
